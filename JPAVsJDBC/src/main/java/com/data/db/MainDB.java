@@ -34,6 +34,7 @@ public class MainDB {
 		Connection dbConnection = null;
 		Statement statement = null;
 		String query = "select * from CUSTOMER";
+		String s = String.format("hello world %s  %d %n", "abc", 344);
 		
 		try {
 			dbConnection = getConnection();
@@ -42,14 +43,13 @@ public class MainDB {
 			
 			while(resultSet.next()){
 				String customerName = resultSet.getString("CUSTOMERNAME");
-				logger.info("Customer name is {}",customerName);
+				logger.info("Customer name is {}", customerName);
 				System.out.println(customerName);
 			}
 			
 		} catch (SQLException e) {
 			logger.info("error while fetching results", e.getMessage());
-		}
-		
+		}		
 	}
 
 	private static Connection getConnection() throws SQLException {
