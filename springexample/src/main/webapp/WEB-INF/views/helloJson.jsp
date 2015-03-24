@@ -10,7 +10,7 @@
 		$(document).ready(function() {
 			var list = ${msg};
 			alert(list.nameString);
-			$('#getJson').append(list.nameString); 
+			$('#getJson').append(list.nameString);  
 		});
 	</script>
 	
